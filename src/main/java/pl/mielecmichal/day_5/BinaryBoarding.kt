@@ -33,15 +33,7 @@ class BoardingPass(letters : String) {
         return range.second
     }
 
-    private fun upperHalf(pair : Pair<Long, Long>) : Pair<Long, Long> {
-        return Pair(middle(pair), pair.second)
-    }
-
-    private fun lowerHalf(pair : Pair<Long, Long>) : Pair<Long, Long> {
-        return Pair(pair.first, middle(pair))
-    }
-
-    private fun middle(pair : Pair<Long, Long>) : Long {
-        return (pair.second + pair.first) / 2
-    }
+    private fun upperHalf(pair : Pair<Long, Long>) = Pair(middle(pair), pair.second)
+    private fun lowerHalf(pair : Pair<Long, Long>) = Pair(pair.first, middle(pair))
+    private fun middle(pair : Pair<Long, Long>) = (pair.second + pair.first) / 2
 }
