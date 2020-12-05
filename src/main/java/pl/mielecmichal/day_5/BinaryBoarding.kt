@@ -21,9 +21,9 @@ class BoardingPass(letters : String) {
     val row = partition(letters.substring(0, 7).toCharArray())
     val column = partition(letters.substring(7, 10).toCharArray())
 
-    private fun partition(halvings : CharArray) : Long {
-        var range = Pair(0L, 2.0.pow(halvings.size).toLong() - 1)
-        for(h in halvings){
+    private fun partition(coordinates : CharArray) : Long {
+        var range = Pair(0L, 2.0.pow(coordinates.size).toLong() - 1)
+        for(h in coordinates){
             range = when(h){
                 'F', 'L' -> lowerHalf(range)
                 'B', 'R' -> upperHalf(range)
